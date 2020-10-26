@@ -35,7 +35,6 @@
             max-height="30"
           />
         </v-list-item-avatar>
-
         <v-list-item-content>
           <v-list-item-title
             class="display-1"
@@ -89,7 +88,7 @@
 </template>
 
 <script>
-  // Utilities
+// Utilities
   import {
     mapState,
   } from 'vuex'
@@ -112,35 +111,35 @@
           to: '/',
         },
         {
-          icon: 'mdi-account',
-          title: 'user',
+          icon: 'mdi-new-box',
+          title: 'New',
           to: '/pages/user',
         },
         {
-          title: 'rtables',
-          icon: 'mdi-clipboard-outline',
+          title: 'In Review',
+          icon: 'mdi-book-open-variant',
           to: '/tables/regular-tables',
         },
         {
-          title: 'typography',
-          icon: 'mdi-format-font',
+          title: 'Accepted',
+          icon: 'mdi-book-check',
           to: '/components/typography',
         },
         {
-          title: 'icons',
-          icon: 'mdi-chart-bubble',
+          title: 'Rejected',
+          icon: 'mdi-book-remove',
           to: '/components/icons',
         },
-        {
-          title: 'google',
-          icon: 'mdi-map-marker',
-          to: '/maps/google-maps',
-        },
-        {
-          title: 'notifications',
-          icon: 'mdi-bell',
-          to: '/components/notifications',
-        },
+        // {
+        //   title: 'google',
+        //   icon: 'mdi-map-marker',
+        //   to: '/maps/google-maps',
+        // },
+        // {
+        //   title: 'notifications',
+        //   icon: 'mdi-bell',
+        //   to: '/components/notifications',
+        // },
       ],
     }),
 
@@ -160,7 +159,7 @@
       profile () {
         return {
           avatar: true,
-          title: this.$t('avatar'),
+          title: 'Reviews',
         }
       },
     },
@@ -178,58 +177,58 @@
 </script>
 
 <style lang="sass">
-  @import '~vuetify/src/styles/tools/_rtl.sass'
+@import '~vuetify/src/styles/tools/_rtl.sass'
 
-  #core-navigation-drawer
-    .v-list-group__header.v-list-item--active:before
-      opacity: .24
+#core-navigation-drawer
+  .v-list-group__header.v-list-item--active:before
+    opacity: .24
 
+  .v-list-item
+    &__icon--text,
+    &__icon:first-child
+      justify-content: center
+      text-align: center
+      width: 20px
+
+      +ltr()
+        margin-right: 24px
+        margin-left: 12px !important
+
+      +rtl()
+        margin-left: 24px
+        margin-right: 12px !important
+
+  .v-list--dense
     .v-list-item
       &__icon--text,
       &__icon:first-child
-        justify-content: center
-        text-align: center
-        width: 20px
+        margin-top: 10px
+
+  .v-list-group--sub-group
+    .v-list-item
+      +ltr()
+        padding-left: 8px
+
+      +rtl()
+        padding-right: 8px
+
+    .v-list-group__header
+      +ltr()
+        padding-right: 0
+
+      +rtl()
+        padding-right: 0
+
+      .v-list-item__icon--text
+        margin-top: 19px
+        order: 0
+
+      .v-list-group__header__prepend-icon
+        order: 2
 
         +ltr()
-          margin-right: 24px
-          margin-left: 12px !important
+          margin-right: 8px
 
         +rtl()
-          margin-left: 24px
-          margin-right: 12px !important
-
-    .v-list--dense
-      .v-list-item
-        &__icon--text,
-        &__icon:first-child
-          margin-top: 10px
-
-    .v-list-group--sub-group
-      .v-list-item
-        +ltr()
-          padding-left: 8px
-
-        +rtl()
-          padding-right: 8px
-
-      .v-list-group__header
-        +ltr()
-          padding-right: 0
-
-        +rtl()
-          padding-right: 0
-
-        .v-list-item__icon--text
-          margin-top: 19px
-          order: 0
-
-        .v-list-group__header__prepend-icon
-          order: 2
-
-          +ltr()
-            margin-right: 8px
-
-          +rtl()
-            margin-left: 8px
+          margin-left: 8px
 </style>

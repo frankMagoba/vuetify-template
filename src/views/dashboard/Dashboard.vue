@@ -26,9 +26,7 @@
                   icon
                   v-on="on"
                 >
-                  <v-icon
-                    color="info"
-                  >
+                  <v-icon color="info">
                     mdi-refresh
                   </v-icon>
                 </v-btn>
@@ -68,7 +66,9 @@
             >
               mdi-clock-outline
             </v-icon>
-            <span class="caption grey--text font-weight-light">updated 10 minutes ago</span>
+            <span
+              class="caption grey--text font-weight-light"
+            >updated 10 minutes ago</span>
           </template>
         </base-material-chart-card>
       </v-col>
@@ -93,9 +93,7 @@
                   icon
                   v-on="on"
                 >
-                  <v-icon
-                    color="info"
-                  >
+                  <v-icon color="info">
                     mdi-refresh
                   </v-icon>
                 </v-btn>
@@ -131,8 +129,7 @@
             >
               mdi-arrow-up
             </v-icon>
-            <span class="green--text">55%</span>&nbsp;
-            increase in today's sales
+            <span class="green--text">55%</span>&nbsp; increase in today's sales
           </p>
 
           <template v-slot:actions>
@@ -142,7 +139,9 @@
             >
               mdi-clock-outline
             </v-icon>
-            <span class="caption grey--text font-weight-light">updated 4 minutes ago</span>
+            <span
+              class="caption grey--text font-weight-light"
+            >updated 4 minutes ago</span>
           </template>
         </base-material-chart-card>
       </v-col>
@@ -167,9 +166,7 @@
                   icon
                   v-on="on"
                 >
-                  <v-icon
-                    color="info"
-                  >
+                  <v-icon color="info">
                     mdi-refresh
                   </v-icon>
                 </v-btn>
@@ -209,7 +206,9 @@
             >
               mdi-clock-outline
             </v-icon>
-            <span class="caption grey--text font-weight-light">campaign sent 26 minutes ago</span>
+            <span
+              class="caption grey--text font-weight-light"
+            >campaign sent 26 minutes ago</span>
           </template>
         </base-material-chart-card>
       </v-col>
@@ -401,9 +400,7 @@
         dailySalesChart: {
           data: {
             labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-            series: [
-              [12, 17, 7, 17, 23, 18, 38],
-            ],
+            series: [[12, 17, 7, 17, 23, 18, 38]],
           },
           options: {
             lineSmooth: this.$chartist.Interpolation.cardinal({
@@ -422,9 +419,7 @@
         dataCompletedTasksChart: {
           data: {
             labels: ['12am', '3pm', '6pm', '9pm', '12pm', '3am', '6am', '9am'],
-            series: [
-              [230, 750, 450, 300, 280, 240, 200, 190],
-            ],
+            series: [[230, 750, 450, 300, 280, 240, 200, 190]],
           },
           options: {
             lineSmooth: this.$chartist.Interpolation.cardinal({
@@ -442,10 +437,22 @@
         },
         emailsSubscriptionChart: {
           data: {
-            labels: ['Ja', 'Fe', 'Ma', 'Ap', 'Mai', 'Ju', 'Jul', 'Au', 'Se', 'Oc', 'No', 'De'],
+            labels: [
+              'Ja',
+              'Fe',
+              'Ma',
+              'Ap',
+              'Mai',
+              'Ju',
+              'Jul',
+              'Au',
+              'Se',
+              'Oc',
+              'No',
+              'De',
+            ],
             series: [
               [542, 443, 320, 780, 553, 453, 326, 434, 568, 610, 756, 895],
-
             ],
           },
           options: {
@@ -462,14 +469,17 @@
             },
           },
           responsiveOptions: [
-            ['screen and (max-width: 640px)', {
-              seriesBarDistance: 5,
-              axisX: {
-                labelInterpolationFnc: function (value) {
-                  return value[0]
+            [
+              'screen and (max-width: 640px)',
+              {
+                seriesBarDistance: 5,
+                axisX: {
+                  labelInterpolationFnc: function (value) {
+                    return value[0]
+                  },
                 },
               },
-            }],
+            ],
           ],
         },
         headers: [
@@ -543,15 +553,18 @@
         tasks: {
           0: [
             {
-              text: 'Sign contract for "What are conference organizers afraid of?"',
+              text:
+                'Sign contract for "What are conference organizers afraid of?"',
               value: true,
             },
             {
-              text: 'Lines From Great Russian Literature? Or E-mails From My Boss?',
+              text:
+                'Lines From Great Russian Literature? Or E-mails From My Boss?',
               value: false,
             },
             {
-              text: 'Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit',
+              text:
+                'Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit',
               value: false,
             },
             {
@@ -561,25 +574,30 @@
           ],
           1: [
             {
-              text: 'Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit',
+              text:
+                'Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit',
               value: true,
             },
             {
-              text: 'Sign contract for "What are conference organizers afraid of?"',
+              text:
+                'Sign contract for "What are conference organizers afraid of?"',
               value: false,
             },
           ],
           2: [
             {
-              text: 'Lines From Great Russian Literature? Or E-mails From My Boss?',
+              text:
+                'Lines From Great Russian Literature? Or E-mails From My Boss?',
               value: false,
             },
             {
-              text: 'Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit',
+              text:
+                'Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit',
               value: true,
             },
             {
-              text: 'Sign contract for "What are conference organizers afraid of?"',
+              text:
+                'Sign contract for "What are conference organizers afraid of?"',
               value: true,
             },
           ],
