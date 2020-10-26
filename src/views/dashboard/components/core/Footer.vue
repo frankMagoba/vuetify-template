@@ -1,26 +1,21 @@
 <template>
   <v-footer
     id="dashboard-core-footer"
+    absolute
   >
     <v-container>
       <v-row
         align="center"
         no-gutters
       >
-        <v-col
-          v-for="(link, i) in links"
-          :key="i"
-          class="text-center mb-sm-0 mb-5"
-          cols="auto"
-        >
+        <div>
           <a
-            :href="link.href"
-            class="mr-0 grey--text text--darken-3"
-            rel="noopener"
             target="_blank"
-            v-text="link.text"
-          />
-        </v-col>
+          >KISM</a>
+          <span
+            class="ml-1"
+          >&copy; 2020.</span>
+        </div>
 
         <v-spacer class="hidden-sm-and-down" />
 
@@ -28,12 +23,12 @@
           cols="12"
           md="auto"
         >
-          <div class="body-1 font-weight-light pt-6 pt-md-0 text-center">
-            &copy; 2019, made with
-            <v-icon size="18">
-              mdi-heart
-            </v-icon>
-            by <a href="https://www.creative-tim.com">Creative Tim</a> for a better web.
+          <div class="ml-auto">
+            <span class="mr-1">Developed by</span>
+            <a
+              href="https://kinetics.co.ke"
+              target="_blank"
+            >Kinetics Technology LTD</a>
           </div>
         </v-col>
       </v-row>

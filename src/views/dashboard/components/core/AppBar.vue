@@ -105,14 +105,47 @@
         </div>
       </v-list>
     </v-menu>
-
-    <v-btn
-      class="ml-2"
-      min-width="0"
-      text
+    <v-menu
+      bottom
+      left
+      offset-y
+      origin="top right"
+      transition="scale-transition"
     >
-      <v-icon>mdi-account</v-icon>
-    </v-btn>
+      <template v-slot:activator="{ attrs, on }">
+        <v-btn
+          class="ml-2"
+          min-width="0"
+          text
+          v-bind="attrs"
+          v-on="on"
+        >
+          <v-icon>mdi-account</v-icon>
+        </v-btn>
+      </template>
+
+      <v-list
+        :tile="false"
+        nav
+      >
+        <div>
+          <app-bar-item
+            v-for="(n, i) in menus"
+            :key="`item-${i}`"
+          >
+            <v-list-item-title v-text="n" />
+          </app-bar-item>
+        </div>
+      </v-list>
+    </v-menu>
+
+    <!--    <v-btn-->
+    <!--      class="ml-2"-->
+    <!--      min-width="0"-->
+    <!--      text-->
+    <!--    >-->
+    <!--      <v-icon>mdi-account</v-icon>-->
+    <!--    </v-btn>-->
   </v-app-bar>
 </template>
 
@@ -166,6 +199,11 @@
         'You\'re now friends with Andrew',
         'Another Notification',
         'Another one',
+      ],
+      menus: [
+        'Profile',
+        'Settings',
+        'Logout',
       ],
     }),
 
